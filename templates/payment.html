@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment</title>
+    <link rel="stylesheet" href="/static/css/payment.css">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Stripe Payment</h1>
+    <div id="payment-element"></div>
+
+    <button id="checkout-button">Pay Now</button>
+
+    <script>
+        document.getElementById('checkout-button').addEventListener('click', function() {
+        // Redirect to the payment route
+        window.location.href = '/process_payment'; 
+         });
+        const stripe = Stripe('YOUR_STRIPE_PUBLISHABLE_KEY');
+        const elements = stripe.elements();
+        const card = elements.create('card');
+        card.mount('#payment-element');
+
+        //const checkoutButton = document.getElementById('checkout-button');
+
+        checkoutButton.addEventListener('click', () => {
+            stripe.confirmCardPayment('YOUR_CLIENT_SECRET', {
+                payment_method: card
+            })
+                .then(function(result) {
+                    if (result.error) {
+                        alert('Payment failed: ' + result.error.message);
+                    } else {
+                        alert('Payment successful!');
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
+

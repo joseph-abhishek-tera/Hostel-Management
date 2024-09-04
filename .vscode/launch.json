@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "name": "Attach to Edge",
+            "port": 9222,
+            "request": "attach",
+            "type": "msedge",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "name": "http://127.0.0.1:3000/templates/payment.html",
+            "request": "launch",
+            "url": "http://127.0.0.1:3000/templates/payment.html"
+        }
+    ]
+}

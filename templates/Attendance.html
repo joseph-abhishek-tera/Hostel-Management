@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="/static/css/Attendance.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Tracker</h1>
+        
+        <label for="attendance-date">Select Date:</label>
+        <input type="date" id="attendance-date" onchange="updateTableDate()" />
+        
+        <table id="attendance-table">
+            <thead>
+                <tr>
+                    <th>Roll_Number</th>
+                    <th>student_name</th>
+                    <th>student_place</th>
+                    <th>year_of_studying</th>
+                    <th>branch</th>
+                    <th>father_name</th>
+                    <th>mother_name</th>
+                    <th>  </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tbody>
+                    {% for studentrg in student_details %}
+                    <tr>
+                        <td>{{ studentrg['id'] }}</td>
+                        <td>{{ studentrg['student_name'] }}</td>
+                        <td>{{ studentrg['student_place'] }}</td>
+                        <td>{{ studentrg['year_of_studying'] }}</td>
+                        <td>{{ studentrg['branch'] }}</td>
+                        <td>{{ studentrg['father_name'] }}</td>
+                        <td>{{ studentrg['mother_name'] }}</td>
+                        <!-- Add more fields as needed -->
+                        {% endfor %}
+                        <td><input type="checkbox" class="attendance-checkbox" data-student-id="002" data-attendance-date="2023-11-07"></td>
+                    </tr>
+                    
+                </tbody>
+                    
+                </tr>
+                <!-- Add more rows for additional students and dates -->
+            </tbody>
+        </table>
+        <button onclick="updateAttendance()">Update Attendance</button>
+    </div>
+
+    <script src="Java Script/Attendance.js"></script>
+
+    <script>
+        function updateTableDate() {
+            const selectedDate = document.getElementById('attendance-date').value;
+            const dateCells = document.querySelectorAll('.attendance-date');
+
+            dateCells.forEach(cell => {
+                cell.textContent = selectedDate;
+            });
+        }
+    </script>
+</body>
+</html>

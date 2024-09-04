@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/static/css/studentpage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo.png" alt="Hostel Management System">
+            <h1>Welcome Student Dashboard</h1>
+        </div>
+
+        <div class="student-profile">
+            <div class="profile-image">
+                <img src="templates/images/img-01 (1).png" alt="Student Photo">
+            </div>
+
+            <div class="student-details">
+                <h2>Student Details</h2>
+                <div class="detail-item">
+                    <label>Roll Number:</label>
+                    <span>{{ student_details['id'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Student Name:</label>
+                    <span>{{ student_details['student_name'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Student Place:</label>
+                    <span>{{ student_details['student_place'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Year of Studying:</label>
+                    <span>{{ student_details['year_of_studying'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Branch:</label>
+                    <span>{{ student_details['branch'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Father's Name:</label>
+                    <span>{{ student_details['father_name'] }}</span>
+                </div>
+                <div class="detail-item">
+                    <label>Mother's Name:</label>
+                    <span>{{ student_details['mother_name'] }}</span>
+                </div>
+                <!-- Add more fields as needed -->
+            </div>
+        </div>
+
+        <div class="notice-board">
+            <h2>Notice Board</h2>
+            <ul class="notices">
+                <li>
+                    <a href="#">Important Notice for All Students</a>
+                </li>
+                <li>
+                    <a href="#">Upcoming Events and Activities</a>
+                </li>
+                <li>
+                    <a href="#">Exam Dates and Schedules</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

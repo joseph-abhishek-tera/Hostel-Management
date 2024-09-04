@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="login-link">
+                <input type="button" value="Login" onclick="redirectToLoginPage()">
+            </div>
+        </nav>
+    </header>
+    <div class="welcome">
+        <h1>Welcome to Hostel Management</h1>
+    </div>
+    <div class="container">
+        <div class="opaque-background">
+            <p>Explore our facilities and log in to manage hostel activities.</p>
+
+            <div class="facility-grid">
+                <div class="facility">
+                    <h2>Free Wi-Fi</h2>
+                    <p>Fast and reliable internet access.</p>
+                </div>
+                <div class="facility">
+                    <h2>Pleasant Atmosphere</h2>
+                    <p>Comfortable and welcoming environment.</p>
+                </div>
+                <div class="facility">
+                    <h2>Facility Name 3</h2>
+                    <p>Description of Facility 3.</p>
+                </div>
+                <div class="facility">
+                    <h2>Facility Name 4</h2>
+                    <p>Description of Facility 4.</p>
+                </div>
+                <!-- Add more facilities as needed -->
+            </div>
+            
+            <div class="facilitynames">
+                <h2>Facility Names</h2>
+                <p>Provide an overview or list of facilities here.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectToLoginPage() {
+            window.location.href = "/loginpage";
+        }
+    </script>
+</body>
+</html>

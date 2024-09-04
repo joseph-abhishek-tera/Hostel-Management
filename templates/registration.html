@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="/static/css/register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Registration</h1>
+        
+        <form id="registrationForm"  method="post" action="/payment">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" placeholder="Enter student's name" required>
+
+            <label for="studentPlace">Student Place:</label>
+            <input type="text" id="studentPlace" name="studentPlace" placeholder="Enter student's place" required>
+
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" placeholder="Enter roll number" required>
+            
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter phone number" required>
+
+            <label for="yearOfStudying">Year of Studying:</label>
+            <input type="text" id="yearOfStudying" name="yearOfStudying" placeholder="Enter year of studying" required>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" placeholder="Enter branch" required>
+
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+
+            <label for="motherName">Mother's Name:</label>
+            <input type="text" id="motherName" name="motherName" placeholder="Enter mother's name" required>
+            <br></br>
+
+            <label for="password">Password:</label> <br></br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+            <br></br>
+            <label for="confirmPassword">Confirm Password:</label><br></br>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
+
+            <!-- Add more fields if needed -->
+
+            <button id="registerButton" type="submit">Register</button>
+
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function() {
+            // Redirect to the payment route
+            window.location.href = '/payment'; // Replace '/payment-route' with your actual payment route
+        });
+        </script>
+    
+
+    <!-- Your JavaScript code can be included here for handling form submission if needed -->
+</body>
+</html>

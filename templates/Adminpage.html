@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration Page</title>
+    <link rel="stylesheet" href="/static/css/Adminpage.css">
+</head>
+
+<body>
+    <div class="headerlm"></div>
+    <header class="a">
+        <h1>Administration Panel</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/staff">Staff Details</a></li>
+            <li><a href="/studentdetails">Student Details</a></li>
+            <li><a href="/attendance">Attendance</a></li>
+            <li><a href="/roomdetails">Room Details</a></li>
+            <li><a href="/messbill">Mess Bill Uploading</a></li>
+            <li><a href="/newsnotices">Add News and Notices</a></li>
+            <li><input type="button" value="Logout" onclick="redirectToLoginPage()"></li>
+        </ul>
+    </nav>
+    
+    <main id="content">
+        <section class="welcome-section">
+            <h2>Welcome to the Administration Panel</h2>
+            <p>Manage and oversee various administrative tasks from staff details to room allocation.</p>
+            <p>Explore the navigation menu to get started!</p>
+        </section>
+    </main>
+
+    <script>
+        function redirectToLoginPage() {
+            window.location.href = "/logout";
+        }
+    </script>
+
+    
+</body>
+</html>

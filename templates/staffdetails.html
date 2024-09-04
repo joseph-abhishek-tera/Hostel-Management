@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Staff Details</title>
+    <link rel="stylesheet" href="/static/css/staff.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hostel Staff Details</h1>
+        <div id="staffContainer" class="staff-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Date of Join</th>
+                        <th>Salary</th>
+                        <!-- Add more headers as needed -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for staff in staff_details %}
+                    <tr>
+                        <td>{{ staff['name'] }}</td>
+                        <td>{{ staff['gender'] }}</td>
+                        <td>{{ staff['dateofjoin'] }}</td>
+                        <td>{{ staff['salary'] }}</td>
+                        
+                        <!-- Add more fields as needed -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <button onclick="toggleForm()">Add Details</button>
+    
+            <!-- Form to add details -->
+            <form id="addDetailsForm" action="/add_details" method="post" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender"><br><br>
+                
+                <label for="date_of_join">Date of Join:</label>
+                <input type="date" id="date_of_join" name="date_of_join"><br><br>
+                
+                <label for="salary">Salary:</label>
+                <input type="text" id="salary" name="salary"><br><br>
+                
+                <input type="submit" value="Confirm Details">
+                <!-- You might also have a "Cancel" button to hide the form -->
+            </form>
+            
+    
+            <!-- Rest of your HTML code -->
+        </div>
+    </div>
+    <!-- Inside the <head> section of your HTML -->
+<script>
+    function toggleForm() {
+        var form = document.getElementById("addDetailsForm");
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

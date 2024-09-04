@@ -1,0 +1,57 @@
+/* style.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply styles to the container */
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for headings */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for form labels */
+  label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  /* Style for form inputs */
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style for the submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Style for the submit button on hover */
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
